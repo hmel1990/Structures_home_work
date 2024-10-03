@@ -53,6 +53,7 @@ struct AUDI
 int main()
 {
 	Kettle kettle;
+	cout << "kettle" << "\n";
 
 	kettle.dimension.volume = 1.7;
 	cout << kettle.dimension.volume <<"\n";
@@ -66,7 +67,12 @@ int main()
 	kettle.color = "white";
 	cout << kettle.color << "\n";
 
+	cout << "\n\n";
+
+
 	Iphone iphone;
+	cout << "iphone" << "\n";
+
 	iphone.color = "black";
 	cout << iphone.color << "\n";
 
@@ -79,8 +85,11 @@ int main()
 	iphone.material = Materials::STEEL;
 	cout << (Materials*)iphone.material << "\n";
 
+	cout << "\n\n";
 
 	AUDI Q5;
+	cout << "Q5" << "\n";
+
 	Q5.color = "gray";
 	cout << Q5.color << "\n";
 
