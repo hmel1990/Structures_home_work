@@ -2,7 +2,6 @@
 using namespace std;
 
 
-enum class Colors { GRAY, WHITE, BLACK, ROSE };
 enum class Materials { GLASS, IRON, STEEL, WOOD, CLAY, PLASTIC, CERAMICS };
 struct Dimensions
 {
@@ -22,7 +21,7 @@ struct Kettle
 	bool filter;//наличие фильтра
 	string* equipment;//доп. функции
 	string guarantee;// гарантийное обслуживание
-	Colors color;//цвет
+	string color;//цвет
 };
 
 
@@ -35,7 +34,7 @@ struct Iphone
 	double battery_power; // мощность батареи
 	bool Pro;//модель
 	string* equipment;//доп. функции
-	Colors color;//цвет
+	string color;//цвет
 
 };
 
@@ -43,7 +42,7 @@ struct Iphone
 struct AUDI
 {
 	Dimensions dimension; //габариты
-	Colors color;// цвет
+	string color;//цвет
 	string petrol;// тип топлива
 	string complictation;// комплектация
 	bool hybrid;// наличие електроустановки
@@ -54,20 +53,46 @@ struct AUDI
 int main()
 {
 	Kettle kettle;
+
 	kettle.dimension.volume = 1.7;
+	cout << kettle.dimension.volume <<"\n";
+
 	kettle.filter = true;
+	cout << kettle.filter << "\n";
+
 	kettle.material = Materials::GLASS;
-	kettle.color = Colors::WHITE;
+	cout << (Materials*) kettle.material << "\n";
+
+	kettle.color = "white";
+	cout << kettle.color << "\n";
 
 	Iphone iphone;
-	iphone.color = Colors::BLACK;
+	iphone.color = "black";
+	cout << iphone.color << "\n";
+
 	iphone.E_sim = 2;
+	cout << iphone.E_sim << "\n";
+
 	iphone.dimension.diagonal = 6.7;
+	cout << iphone.dimension.diagonal << "\n";
+
 	iphone.material = Materials::STEEL;
+	cout << (Materials*)iphone.material << "\n";
+
 
 	AUDI Q5;
-	Q5.color = Colors::GRAY;
+	Q5.color = "gray";
+	cout << Q5.color << "\n";
+
 	Q5.hybrid = false;
+	cout << Q5.hybrid << "\n";
+
 	Q5.petrol_volume = 60;
+	cout << Q5.petrol_volume << "\n";
+
+
 	Q5.complictation = "Premium Plus";
+	cout << Q5.complictation << "\n";
+
+
 }
